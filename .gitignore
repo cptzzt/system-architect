@@ -1,0 +1,16 @@
+# 用户教材（版权属于出版社，绝不入库）
+textbook/
+
+# 系统
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# 临时/日志
+*.log
+*.tmp
