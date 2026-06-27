@@ -14,6 +14,27 @@
 
 > 无教材也能用——`core/knowledge/` 内置知识层可独立工作。接入教材后，建议可溯源到教材原文。
 
+## 在其他 AI 工具使用
+
+本 skill 用 Claude Code 的 `SKILL.md` 格式，但**知识层（`core/knowledge/`）工具无关**——都是纯 Markdown 知识，任何 AI 编码工具都能用。
+
+**其他工具适配**（使用者自行操作）：
+
+1. **知识层原样保留**：`core/knowledge/` 不用改
+2. **把 `SKILL.md` 指令复制到你的工具规则文件**：
+
+   | 工具 | 规则文件 |
+   |------|---------|
+   | Cursor | `.cursorrules` 或 `.mdc`（用 `@路径` 引用知识文件） |
+   | Windsurf | `.windsurfrules` |
+   | Cline | `.clinerules` |
+   | GitHub Copilot | `.github/copilot-instructions.md` |
+   | 通用跨工具 | `AGENTS.md` |
+
+3. **调整子文件引用语法**：`SKILL.md` 用 Markdown 链接路由，各工具语法略不同（如 Cursor 用 `@core/knowledge/...`），按你的工具改。
+
+> 各工具规则格式会随版本更新，以你工具的官方文档为准。本 skill 只维护 Claude Code 版，其他工具由使用者适配（知识层零改动）。
+
 ---
 
 ## 这个 skill 是什么
